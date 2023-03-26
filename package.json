@@ -14,7 +14,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:watchAll": "jest --watchAll",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen:atoms": "scaffdog generate atoms",
+    "gen:mole": "scaffdog generate molecules"
   },
   "dependencies": {
     "@types/node": "18.15.10",
@@ -42,6 +44,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/jest": "^29.5.0",
     "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
@@ -59,6 +62,7 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.5",
+    "scaffdog": "^2.5.0",
     "stylelint-config-prettier": "^9.0.5",
     "tailwindcss": "^3.2.7",
     "ts-jest": "^29.0.5"

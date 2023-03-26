@@ -26,8 +26,21 @@
 - Storybook
 - Jest
 - Husky
+- scaffdog
 
 がデフォルトで使えるようになっています。
+
+## コンポーネント作成について
+コマンドを使用して雛形を自動生成します。
+
+```sh
+# components/atomsに作りたい場合
+yarn gen:atoms
+# components/moleculesに作りたい場合
+yarn gen:mole
+```
+
+コマンド実行後、対話形式でファイル名を聞かれるので入力してください。
 
 <hr>
 

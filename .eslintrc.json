@@ -57,5 +57,11 @@
     "react/react-in-jsx-scope": 0,
     "no-empty-function": 0,
     "@typescript-eslint/ban-ts-comment": 0
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/pages/**/*", "*.stories.{ts,tsx}"],
+      "rules": { "import/no-default-export": "off" }
+    }
+  ]
 }
