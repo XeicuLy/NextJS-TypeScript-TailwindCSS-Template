@@ -43,6 +43,59 @@ yarn gen:mole
 
 コマンド実行後、対話形式でファイル名を聞かれるので入力してください。
 
+## ディレクトリ構成
+```sh
+src/
+├── components/
+│   ├── atoms/
+│   │   └── Example/
+│   │       ├── index.tsx
+│   │       ├── index.stories.tsx
+│   │       └── index.test.tsx
+│   └─── molecules/
+│        └── Example/
+│            ├── index.tsx
+│            ├── index.stories.tsx
+│            └── index.test.tsx
+│
+├── pages/
+├── const/
+├── libs/
+│   └── packages/
+├── public/
+├── hooks/
+├── repositories/
+├── store/
+├── styles/
+└── types/
+```
+
+- components
+  - atoms
+    - 原子コンポーネント
+  - molecules
+    - 分子コンポーネント
+- const
+  - 定数
+- libs
+  - グローバルに使用可能な汎用モジュール
+  - 外部のパッケージをラップしたものはpackages配下に。
+    - `axios.ts`など
+- public
+  - 公開用のassets系ファイル
+- hooks
+  - 汎用的なhooks
+- repositories
+  - API用のモジュール
+- store
+  - Recoil用のモジュール
+  - グローバルに使用可能なstateを集約
+- styles
+  - TailwindCSS用の設定ファイル
+  - グローバルに使用可能なスタイルを集約
+- types
+  - グローバルに使用可能な型を集約
+
 <hr>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
