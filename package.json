@@ -13,7 +13,8 @@
     "build-storybook": "storybook build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:watchAll": "jest --watchAll"
+    "test:watchAll": "jest --watchAll",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "18.15.10",
@@ -50,8 +51,10 @@
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.4",
     "stylelint-config-prettier": "^9.0.5",
     "ts-jest": "^29.0.5"
