@@ -27,6 +27,7 @@
 - Jest
 - Husky
 - scaffdog
+- volta
 
 がデフォルトで使えるようになっています。
 
