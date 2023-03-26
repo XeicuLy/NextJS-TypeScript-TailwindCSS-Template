@@ -1,6 +1,14 @@
 {
-  "plugins": ["unused-imports"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "plugins": ["unused-imports", "jest"],
   "extends": [
+    "plugin:jest/recommended",
+    "plugin:jest/style",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "next/core-web-vitals",
@@ -8,6 +16,8 @@
   ],
   "parser": "@typescript-eslint/parser",
   "rules": {
+    "jest/consistent-test-it": ["error", { "fn": "it" }],
+    "jest/require-top-level-describe": ["error"],
     "no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
     "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
