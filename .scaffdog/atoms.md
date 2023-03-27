@@ -39,13 +39,14 @@ export const Primary: Story = {
 ```
 
 # `{{ inputs.name | pascal }}/index.test.tsx`
+
 ```tsx
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { {{ inputs.name | pascal }} } from '.'
 describe('atoms/{{ inputs.name | pascal }}', () => {
-  it("renders", () => {
-    render(<{{ inputs.name | pascal }} />)
-    expect(screen.getByText('{{ inputs.name | pascal }}')).toBeInTheDocument()
-  })
-})
+  it('renders correctly', () => {
+    const { container } = render(<{{ inputs.name | pascal }} />);
+    expect(container).toMatchSnapshot();
+  });
+});
 ```
