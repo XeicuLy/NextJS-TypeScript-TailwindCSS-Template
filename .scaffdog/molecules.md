@@ -11,11 +11,13 @@ questions:
 
 ```tsx
 import { FC } from "react"
+
 export const {{ inputs.name | pascal }}: FC = () => {
   return (
     <h1>{{ inputs.name | pascal }}</h1>
   )
 }
+
 ```
 
 # `{{ inputs.name | pascal }}/index.stories.tsx`
@@ -23,6 +25,7 @@ export const {{ inputs.name | pascal }}: FC = () => {
 ```tsx
 import type { Meta, StoryObj } from '@storybook/react'
 import { {{ inputs.name | pascal }} } from '.';
+
 const meta = {
   title: "components/molecules/{{ inputs.name | pascal }}",
   component: {{ inputs.name | pascal }},
@@ -36,6 +39,7 @@ export const Primary: Story = {
     primary: true,
   }
 }
+
 ```
 
 # `{{ inputs.name | pascal }}/index.test.tsx`
@@ -43,10 +47,12 @@ export const Primary: Story = {
 ```tsx
 import { render } from '@testing-library/react'
 import { {{ inputs.name | pascal }} } from '.'
+
 describe('molecules/{{ inputs.name | pascal }}', () => {
   it('renders correctly', () => {
     const { container } = render(<{{ inputs.name | pascal }} />);
     expect(container).toMatchSnapshot();
   });
 });
+
 ```
