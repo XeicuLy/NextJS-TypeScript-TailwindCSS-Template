@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply text-5xl font-semibold leading-tight;
+}
+
+h2 {
+  @apply text-4xl font-semibold leading-tight;
+}
+
+h3 {
+  @apply text-3xl font-semibold leading-tight;
+}
+
+p {
+  @apply text-base font-light leading-relaxed text-gray-800;
+}

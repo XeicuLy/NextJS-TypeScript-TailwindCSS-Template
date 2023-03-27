@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Example } from '.';
 
 describe('molecules/Example', () => {
-  it('renders', () => {
-    render(<Example />);
-    expect(screen.getByText('Example')).toBeInTheDocument();
+  it('renders correctly', () => {
+    const { container } = render(<Example />);
+    expect(container).toMatchSnapshot();
   });
 });
