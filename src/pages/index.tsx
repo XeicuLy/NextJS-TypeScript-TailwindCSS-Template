@@ -1,3 +1,4 @@
+import { Button } from '@mantine/core';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -8,7 +9,10 @@ const Home: NextPage = () => {
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className='text-3xl'>Home</div>
+      <div className='text-3xl text-center'>Home</div>
+      <div className='text-center'>
+        <Button className='text-2xl'>ボタン</Button>
+      </div>
     </>
   );
 };
