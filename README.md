@@ -10,7 +10,17 @@
 
 を使用した汎用的なテンプレートです。
 
-基本的には`yarn`を使ってください。
+## プロジェクトの始め方
+
+```bash
+yarn
+yarn dev
+```
+
+## Node と yarn のバージョンについて
+
+volta で固定しています。
+このプロジェクトを使用する場合は volta のセットアップを先に行ってください。
 
 ## 使用技術
 
@@ -28,19 +38,7 @@
 - Husky
 - scaffdog
 
-がデフォルトで使えるようになっています。
-
-## Node と yarn のバージョンについて
-
-volta で固定しています。
-このプロジェクトを使用する場合は volta のセットアップを先に行ってください。
-
-## プロジェクトの始め方
-
-```bash
-yarn
-yarn dev
-```
+が使えるようになっています。
 
 ## コンポーネント作成について
 
@@ -74,10 +72,9 @@ src/
 ├── pages/
 ├── const/
 ├── libs/
-│   └── packages/
 ├── public/
 ├── hooks/
-├── repositories/
+├── api/
 ├── store/
 ├── styles/
 └── types/
@@ -93,14 +90,12 @@ src/
 - const
   - 定数
 - libs
-  - グローバルに使用可能な汎用モジュール
-  - 外部のパッケージをラップしたものは packages 配下に。
-    - `axios.ts`など
+  - グローバルに使用可能な汎用モジュール。関数など。
 - public
   - 公開用の assets 系ファイル
 - hooks
   - 汎用的な hooks
-- repositories
+- api
   - API 用のモジュール
 - store
   - Recoil 用のモジュール
