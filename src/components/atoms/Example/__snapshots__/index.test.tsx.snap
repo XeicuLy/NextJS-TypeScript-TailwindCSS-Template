@@ -2,8 +2,10 @@
 
 exports[`atoms/Example renders correctly 1`] = `
 <div>
-  <h1>
+  <button
+    class="btn btn-primary"
+  >
     Example
-  </h1>
+  </button>
 </div>
 `;
