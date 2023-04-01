@@ -15,8 +15,7 @@
     "test:watch": "jest --watch",
     "test:watchAll": "jest --watchAll",
     "prepare": "husky install",
-    "gen:atoms": "scaffdog generate atoms",
-    "gen:mole": "scaffdog generate molecules"
+    "gen": "hygen generator components"
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -58,6 +57,7 @@
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.3",
+    "hygen": "^6.2.11",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "lint-staged": "^13.2.0",
