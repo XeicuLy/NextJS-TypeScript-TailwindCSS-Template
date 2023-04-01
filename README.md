@@ -2,7 +2,7 @@
 
 ## このプロジェクトについて
 
-このプロジェクトは、
+このプロジェクトは主に、
 
 - NextJS
 - TypeScript
@@ -20,54 +20,59 @@ yarn dev
 ## Node と yarn のバージョンについて
 
 volta で固定しています。
-このプロジェクトを使用する場合は volta のセットアップを先に行ってください。
+このプロジェクトを使用する場合は [volta](https://volta.sh/) のセットアップを先に行ってください。
 
-## 使用技術
+## 使用できる技術
 
-- Next.js v13
-  - app ディレクトリ不採用
-- TypeScript
-  - JavaScript 採用化
-- TailwindCSS
-- axios
-- Recoil
-- Prettier
-- ESLint
-- Storybook
-- Jest
-- Husky
-- scaffdog
-
-が使えるようになっています。
+| ツール名       | 説明                                                       |
+| -------------- | ---------------------------------------------------------- |
+| Next.js v13    | React フレームワークで、app ディレクトリは不採用           |
+| TypeScript v5  | JavaScript の上位互換言語                                  |
+| TailwindCSS v3 | CSS フレームワーク。daisyUI というフレームワークを使用     |
+| axios          | API を叩くためのライブラリ                                 |
+| Recoil         | React 状態管理ライブラリ                                   |
+| Prettier       | コードフォーマッター                                       |
+| ESLint         | コード書き方をチェックするツール                           |
+| Storybook      | コンポーネント単位での UI デザインを確認できるツール       |
+| Jest           | JavaScript のテストフレームワーク                          |
+| Husky          | コミットやプッシュ時に任意のコマンドを自動実行できるツール |
+| hygen          | コンポーネントジェネレーター                               |
 
 ## コンポーネント作成について
 
 コマンドを使用して雛形を自動生成します。
 
 ```sh
-# components/atomsに作りたい場合
-yarn gen:atoms
-# components/moleculesに作りたい場合
-yarn gen:mole
+yarn gen
 ```
 
-コマンド実行後、対話形式でファイル名を聞かれるので入力してください。
+コマンド実行後、対話形式で atoms,molecules,organisms,templates の分類とファイル名を聞かれるので入力してください。
 
 ## ディレクトリ構成
 
 ```sh
 src/
 ├── components/
-│   ├── atoms/
-│   │   └── Example/
-│   │       ├── index.tsx
-│   │       ├── index.stories.tsx
-│   │       └── index.test.tsx
-│   └── molecules/
-│        └── Example/
-│            ├── index.tsx
-│            ├── index.stories.tsx
-│            └── index.test.tsx
+│    ├── atoms/
+│    │    └── Example/
+│    │       ├── index.tsx
+│    │       ├── index.stories.tsx
+│    │       └── index.test.tsx
+│    ├── molecules/
+│    │    └── Example/
+│    │       ├── index.tsx
+│    │       ├── index.stories.tsx
+│    │       └── index.test.tsx
+│    ├── organisms/
+│    │    └── Example/
+│    │       ├── index.tsx
+│    │       ├── index.stories.tsx
+│    │       └── index.test.tsx
+│    └── templates/
+│          └── Example/
+│             ├── index.tsx
+│             ├── index.stories.tsx
+│             └── index.test.tsx
 │
 ├── pages/
 ├── const/
@@ -80,31 +85,22 @@ src/
 └── types/
 ```
 
-- components
-  - atoms
-    - 原子コンポーネント
-  - molecules
-    - 分子コンポーネント
-- pages
-  - 表示されるメインページ用
-- const
-  - 定数
-- libs
-  - グローバルに使用可能な汎用モジュール。関数など。
-- public
-  - 公開用の assets 系ファイル
-- hooks
-  - 汎用的な hooks
-- api
-  - API 用のモジュール
-- store
-  - Recoil 用のモジュール
-  - グローバルに使用可能な state を集約
-- styles
-  - TailwindCSS 用の設定ファイル
-  - グローバルに使用可能なスタイルを集約
-- types
-  - グローバルに使用可能な型を集約
+| ディレクトリ名                    | 説明                                                                          |
+| --------------------------------- | ----------------------------------------------------------------------------- |
+| components                        | UI コンポーネントの集合。                                                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;atoms     | 最小単位の UI コンポーネント。                                                |
+| &nbsp;&nbsp;&nbsp;&nbsp;molecules | 複数の atoms から構成された UI コンポーネント。                               |
+| &nbsp;&nbsp;&nbsp;&nbsp;organisms | atoms や molecules から構成された UI コンポーネント。                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;templates | organisms から構成された UI コンポーネントの集合。                            |
+| pages                             | 表示されるページ。atoms、molecules、organisms、templates を組み合わせたもの。 |
+| const                             | 定数を定義するファイル。                                                      |
+| libs                              | グローバルに使用可能な汎用的なモジュール。関数など。                          |
+| public                            | 公開用のファイルを格納するディレクトリ。                                      |
+| hooks                             | 汎用的な React の Hooks を定義するファイル。                                  |
+| api                               | API 通信をするためのファイル。                                                |
+| store                             | Recoil のグローバルな状態を管理するためのファイル。                           |
+| styles                            | TailwindCSS の設定ファイル。グローバルに使用可能なスタイルを集約。            |
+| types                             | グローバルに使用可能な型を集約するファイル。                                  |
 
 <hr>
 
