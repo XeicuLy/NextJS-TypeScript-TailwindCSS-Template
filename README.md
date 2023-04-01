@@ -87,20 +87,20 @@ src/
 
 | ディレクトリ名                    | 説明                                                                          |
 | --------------------------------- | ----------------------------------------------------------------------------- |
-| components                        | UI コンポーネントの集合。                                                     |
-| &nbsp;&nbsp;&nbsp;&nbsp;atoms     | 最小単位の UI コンポーネント。                                                |
-| &nbsp;&nbsp;&nbsp;&nbsp;molecules | 複数の atoms から構成された UI コンポーネント。                               |
-| &nbsp;&nbsp;&nbsp;&nbsp;organisms | atoms や molecules から構成された UI コンポーネント。                         |
-| &nbsp;&nbsp;&nbsp;&nbsp;templates | organisms から構成された UI コンポーネントの集合。                            |
-| pages                             | 表示されるページ。atoms、molecules、organisms、templates を組み合わせたもの。 |
-| const                             | 定数を定義するファイル。                                                      |
-| libs                              | グローバルに使用可能な汎用的なモジュール。関数など。                          |
-| public                            | 公開用のファイルを格納するディレクトリ。                                      |
-| hooks                             | 汎用的な React の Hooks を定義するファイル。                                  |
-| api                               | API 通信をするためのファイル。                                                |
-| store                             | Recoil のグローバルな状態を管理するためのファイル。                           |
-| styles                            | TailwindCSS の設定ファイル。グローバルに使用可能なスタイルを集約。            |
-| types                             | グローバルに使用可能な型を集約するファイル。                                  |
+| components                        | UI コンポーネントの集合                                                       |
+| &nbsp;&nbsp;&nbsp;&nbsp;atoms     | 最小単位の UI コンポーネント                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;molecules | 複数の atoms から構成された UI コンポーネント                                 |
+| &nbsp;&nbsp;&nbsp;&nbsp;organisms | atoms や molecules から構成された UI コンポーネント                           |
+| &nbsp;&nbsp;&nbsp;&nbsp;templates | organisms から構成された UI コンポーネントの集合                              |
+| pages                             | 表示されるページで、atoms、molecules、organisms、templates を組み合わせたもの |
+| const                             | 定数を定義するファイル                                                        |
+| libs                              | グローバルに使用可能な汎用的なモジュール。関数など                            |
+| public                            | 公開用のファイルを格納するディレクトリ                                        |
+| hooks                             | 汎用的な React の Hooks を定義するファイル                                    |
+| api                               | API 通信をするためのファイル                                                  |
+| store                             | Recoil のグローバルな状態を管理するためのファイル                             |
+| styles                            | TailwindCSS のファイルと、グローバルに使用可能なスタイルを集約                |
+| types                             | グローバルに使用可能な型を集約するファイル                                    |
 
 <hr>
 
