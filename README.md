@@ -22,31 +22,21 @@ yarn dev
 volta で固定しています。
 このプロジェクトを使用する場合は [volta](https://volta.sh/) のセットアップを先に行ってください。
 
-## 使用技術
+## 使用できる技術
 
-- Next.js v13
-  - app ディレクトリ不採用
-- TypeScript
-  - JavaScript 上位互換
-- TailwindCSS(daisyUI)
-  - TailwindCSS ベースのフレームワーク
-- axios
-  - API 叩く用
-- Recoil
-  - 状態管理
-- Prettier
-  - コードフォーマッター
-- ESLint
-  - 書き方大丈夫か見てくれる
-- Storybook
-  - コンポーネント単位でのデザインとか見る
-- Jest
-  - テスト
-- Husky
-  - コミットやプッシュ時に任意のコマンドを自動実行できる
-    - 今回はコミット時に lint,prettier 走らせて、テストが OK だったらコミットできるようになってます。
-- hygen
-  - コンポーネントジェネレーター
+| ツール名       | 説明                                                       |
+| -------------- | ---------------------------------------------------------- |
+| Next.js v13    | React フレームワークで、app ディレクトリは不採用           |
+| TypeScript v5  | JavaScript の上位互換言語                                  |
+| TailwindCSS v3 | CSS フレームワーク。daisyUI というフレームワークを使用     |
+| axios          | API を叩くためのライブラリ                                 |
+| Recoil         | React 状態管理ライブラリ                                   |
+| Prettier       | コードフォーマッター                                       |
+| ESLint         | コード書き方をチェックするツール                           |
+| Storybook      | コンポーネント単位での UI デザインを確認できるツール       |
+| Jest           | JavaScript のテストフレームワーク                          |
+| Husky          | コミットやプッシュ時に任意のコマンドを自動実行できるツール |
+| hygen          | コンポーネントジェネレーター                               |
 
 ## コンポーネント作成について
 
