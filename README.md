@@ -22,6 +22,9 @@ yarn dev
 volta で固定しています。
 このプロジェクトを使用する場合は [volta](https://volta.sh/) のセットアップを先に行ってください。
 
+詳しいことはこちらの記事を御覧ください
+https://zenn.dev/xeiculy/articles/03871845342228
+
 ## 使用できる技術
 
 | ツール名       | 説明                                                       |
