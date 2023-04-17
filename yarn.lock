@@ -2380,6 +2380,14 @@
     "@storybook/client-logger" "7.0.0"
     "@storybook/preview-api" "7.0.0"
 
+"@storybook/core-client@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/core-client/-/core-client-7.0.5.tgz#933fafdaa840f48fa9c005ec00b948a127df667a"
+  integrity sha512-vN3jK0H4IRjdn/VP7E5dtY0MjytTFSosreSzschmSDTs/K9w52Zm+PkmDzQaBtrDo/VNjJCHnxDLDJZ1ewkoEw==
+  dependencies:
+    "@storybook/client-logger" "7.0.5"
+    "@storybook/preview-api" "7.0.5"
+
 "@storybook/core-common@7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/core-common/-/core-common-7.0.0.tgz#59fba04114718eeab88be4b1acf272e368fcaaa5"
@@ -2807,7 +2815,12 @@
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.0.0.tgz#9bb1e57cc60e70bb151879c1c615aca71671270f"
   integrity sha512-oMCkYYVbDaNMolnzObYvHuWNLUGC87osJmjjT3l+zugVUETDM/oDrvbAyzDucCJDea2ZCfxQHxYkhY6R+MQxHA==
 
-"@storybook/react@7.0.0", "@storybook/react@^7.0.0-rc.4":
+"@storybook/react-dom-shim@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.0.5.tgz#ebfc224a20ae816da54f3f70f62ed301439193b9"
+  integrity sha512-iSdP73Af/d8RdNfa4rDHI3JuAakDqPl8Z1LT0cFcfzg29kihdmXIVaLvMcMqTrnqELU6VmzSiE86U+T1XOX95w==
+
+"@storybook/react@7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.0.tgz#b409d926eb9c2e5a8f6400bb0c97d03055360cad"
   integrity sha512-JvLpm9DsDdVPEfg0I5O7so9PgRJa4eqJH5bZLgdtUXyzLWj6d0woa1uz/BqDHEXk5AveNipmTcqxTOZ0SWw2jw==
@@ -2819,6 +2832,33 @@
     "@storybook/preview-api" "7.0.0"
     "@storybook/react-dom-shim" "7.0.0"
     "@storybook/types" "7.0.0"
+    "@types/escodegen" "^0.0.6"
+    "@types/estree" "^0.0.51"
+    "@types/node" "^16.0.0"
+    acorn "^7.4.1"
+    acorn-jsx "^5.3.1"
+    acorn-walk "^7.2.0"
+    escodegen "^2.0.0"
+    html-tags "^3.1.0"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
+    react-element-to-jsx-string "^15.0.0"
+    ts-dedent "^2.0.0"
+    type-fest "^2.19.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/react@^7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.5.tgz#6e3f30c02ffd717f57f37635a67ccd235c23fdf4"
+  integrity sha512-VXLi/oZnYLXe61Bvfan1YY6cANbFgDb5MmCpu8COaYOGjT53o4gTh3zQoDubaN8wzTQfE0TyP9E+m4//KvZxow==
+  dependencies:
+    "@storybook/client-logger" "7.0.5"
+    "@storybook/core-client" "7.0.5"
+    "@storybook/docs-tools" "7.0.5"
+    "@storybook/global" "^5.0.0"
+    "@storybook/preview-api" "7.0.5"
+    "@storybook/react-dom-shim" "7.0.5"
+    "@storybook/types" "7.0.5"
     "@types/escodegen" "^0.0.6"
     "@types/estree" "^0.0.51"
     "@types/node" "^16.0.0"
