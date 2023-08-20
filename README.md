@@ -13,7 +13,7 @@
 ## プロジェクトの始め方
 
 ```bash
-yarn
+yarn install
 yarn dev
 ```
 
@@ -27,19 +27,16 @@ https://zenn.dev/xeiculy/articles/03871845342228
 
 ## 使用できる技術
 
-| ツール名       | 説明                                                       |
-| -------------- | ---------------------------------------------------------- |
-| Next.js v13    | React フレームワークで、app ディレクトリは不採用           |
-| TypeScript v5  | JavaScript の上位互換言語                                  |
-| TailwindCSS v3 | CSS フレームワーク。daisyUI というフレームワークを使用     |
-| axios          | API を叩くためのライブラリ                                 |
-| Recoil         | React 状態管理ライブラリ                                   |
-| Prettier       | コードフォーマッター                                       |
-| ESLint         | コード書き方をチェックするツール                           |
-| Storybook      | コンポーネント単位での UI デザインを確認できるツール       |
-| Jest           | JavaScript のテストフレームワーク                          |
-| Husky          | コミットやプッシュ時に任意のコマンドを自動実行できるツール |
-| hygen          | コンポーネントジェネレーター                               |
+| ツール名    | 説明                                                       |
+| ----------- | ---------------------------------------------------------- |
+| Next.js app | React フレームワークで、app ディレクトリ採用               |
+| TypeScript  | JavaScript の上位互換言語                                  |
+| TailwindCSS | CSS フレームワーク。HeadlessUI と併用                      |
+| Prettier    | コードフォーマッター                                       |
+| ESLint      | コード書き方をチェックするツール                           |
+| Jest        | JavaScript のテストフレームワーク                          |
+| Husky       | コミットやプッシュ時に任意のコマンドを自動実行できるツール |
+| hygen       | コンポーネントジェネレーター                               |
 
 ## コンポーネント作成について
 
@@ -49,61 +46,41 @@ https://zenn.dev/xeiculy/articles/03871845342228
 yarn gen
 ```
 
-コマンド実行後、対話形式で atoms,molecules,organisms,templates の分類とファイル名を聞かれるので入力してください。
+コマンド実行後、対話形式でコンポーネントの分類とファイル名を聞かれるので入力してください。
 
 ## ディレクトリ構成
 
 ```sh
-src/
+app/
+├── layout.tsx
+├── page.tsx
 ├── components/
-│    ├── atoms/
-│    │    └── Example/
-│    │       ├── index.tsx
-│    │       ├── index.stories.tsx
-│    │       └── index.test.tsx
-│    ├── molecules/
-│    │    └── Example/
-│    │       ├── index.tsx
-│    │       ├── index.stories.tsx
-│    │       └── index.test.tsx
-│    ├── organisms/
-│    │    └── Example/
-│    │       ├── index.tsx
-│    │       ├── index.stories.tsx
-│    │       └── index.test.tsx
-│    └── templates/
-│          └── Example/
-│             ├── index.tsx
-│             ├── index.stories.tsx
-│             └── index.test.tsx
-│
-├── pages/
-├── const/
+│    ├── feature/
+│    │    └── Sxample/
+│    │       ├── Sample.tsx
+│    │       └── Sample.test.tsx
+│    └── ui/
+│          └── Sample/
+│             ├── Sample.tsx
+│             └── Sample.test.tsx
 ├── libs/
 ├── public/
-├── hooks/
-├── api/
-├── store/
 ├── styles/
 └── types/
 ```
 
-| ディレクトリ名                    | 説明                                                                          |
-| --------------------------------- | ----------------------------------------------------------------------------- |
-| components                        | UI コンポーネントの集合                                                       |
-| &nbsp;&nbsp;&nbsp;&nbsp;atoms     | 最小単位の UI コンポーネント                                                  |
-| &nbsp;&nbsp;&nbsp;&nbsp;molecules | 複数の atoms から構成された UI コンポーネント                                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;organisms | atoms や molecules から構成された UI コンポーネント                           |
-| &nbsp;&nbsp;&nbsp;&nbsp;templates | organisms から構成された UI コンポーネントの集合                              |
-| pages                             | 表示されるページで、atoms、molecules、organisms、templates を組み合わせたもの |
-| const                             | 定数を定義するファイル                                                        |
-| libs                              | グローバルに使用可能な汎用的なモジュール。関数など                            |
-| public                            | 公開用のファイルを格納するディレクトリ                                        |
-| hooks                             | 汎用的な React の Hooks を定義するファイル                                    |
-| api                               | API 通信をするためのファイル                                                  |
-| store                             | Recoil のグローバルな状態を管理するためのファイル                             |
-| styles                            | TailwindCSS のファイルと、グローバルに使用可能なスタイルを集約                |
-| types                             | グローバルに使用可能な型を集約するファイル                                    |
+| ディレクトリ名                     | 説明                                                           |
+| ---------------------------------- | -------------------------------------------------------------- |
+| app                                | pages ディレクトリのイメージ                                   |
+| &nbsp;&nbsp;&nbsp;&nbsp;layout.tsx | 共通のレイアウトファイル                                       |
+| &nbsp;&nbsp;&nbsp;&nbsp;page.tsx   | ルーティング対象ファイル                                       |
+| components                         | コンポーネントの集合                                           |
+| &nbsp;&nbsp;&nbsp;&nbsp;feature    | ボタンなどのUIコンポーネントの以外集合                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;ui         | ボタンなどのUIコンポーネントの集合                             |
+| libs                               | グローバルに使用可能な汎用的なモジュール。関数など             |
+| public                             | 公開用のファイルを格納するディレクトリ                         |
+| styles                             | TailwindCSS のファイルと、グローバルに使用可能なスタイルを集約 |
+| types                              | グローバルに使用可能な型を集約するファイル                     |
 
 <hr>
 
@@ -119,11 +96,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
