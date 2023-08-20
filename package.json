@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint --no-cache",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}' && next lint --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -25,14 +28,23 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/jest-dom": "^6.0.1",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.3",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-unused-imports": "^3.0.0",
     "husky": "^8.0.3",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
     "lint-staged": "^14.0.0",
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.2",
+    "ts-jest": "^29.1.1"
   },
   "volta": {
     "node": "18.17.1",
