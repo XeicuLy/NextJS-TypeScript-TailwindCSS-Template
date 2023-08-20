@@ -32,7 +32,6 @@ https://zenn.dev/xeiculy/articles/03871845342228
 | Next.js app | React フレームワークで、app ディレクトリ採用               |
 | TypeScript  | JavaScript の上位互換言語                                  |
 | TailwindCSS | CSS フレームワーク。HeadlessUI と併用                      |
-| Recoil      | React 状態管理ライブラリ                                   |
 | Prettier    | コードフォーマッター                                       |
 | ESLint      | コード書き方をチェックするツール                           |
 | Jest        | JavaScript のテストフレームワーク                          |
@@ -66,7 +65,6 @@ app/
 │             └── Sample.test.tsx
 ├── libs/
 ├── public/
-├── store/
 ├── styles/
 └── types/
 ```
@@ -81,7 +79,6 @@ app/
 | &nbsp;&nbsp;&nbsp;&nbsp;ui         | ボタンなどのUIコンポーネントの集合                             |
 | libs                               | グローバルに使用可能な汎用的なモジュール。関数など             |
 | public                             | 公開用のファイルを格納するディレクトリ                         |
-| store                              | Recoil のグローバルな状態を管理するためのファイル              |
 | styles                             | TailwindCSS のファイルと、グローバルに使用可能なスタイルを集約 |
 | types                              | グローバルに使用可能な型を集約するファイル                     |
 
