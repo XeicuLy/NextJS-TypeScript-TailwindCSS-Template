@@ -27,19 +27,17 @@ https://zenn.dev/xeiculy/articles/03871845342228
 
 ## 使用できる技術
 
-| ツール名       | 説明                                                       |
-| -------------- | ---------------------------------------------------------- |
-| Next.js v13    | React フレームワークで、app ディレクトリは不採用           |
-| TypeScript v5  | JavaScript の上位互換言語                                  |
-| TailwindCSS v3 | CSS フレームワーク。daisyUI というフレームワークを使用     |
-| axios          | API を叩くためのライブラリ                                 |
-| Recoil         | React 状態管理ライブラリ                                   |
-| Prettier       | コードフォーマッター                                       |
-| ESLint         | コード書き方をチェックするツール                           |
-| Storybook      | コンポーネント単位での UI デザインを確認できるツール       |
-| Jest           | JavaScript のテストフレームワーク                          |
-| Husky          | コミットやプッシュ時に任意のコマンドを自動実行できるツール |
-| hygen          | コンポーネントジェネレーター                               |
+| ツール名    | 説明                                                       |
+| ----------- | ---------------------------------------------------------- |
+| Next.js app | React フレームワークで、app ディレクトリ採用               |
+| TypeScript  | JavaScript の上位互換言語                                  |
+| TailwindCSS | CSS フレームワーク。HeadlessUI と併用                      |
+| Recoil      | React 状態管理ライブラリ                                   |
+| Prettier    | コードフォーマッター                                       |
+| ESLint      | コード書き方をチェックするツール                           |
+| Jest        | JavaScript のテストフレームワーク                          |
+| Husky       | コミットやプッシュ時に任意のコマンドを自動実行できるツール |
+| hygen       | コンポーネントジェネレーター                               |
 
 ## コンポーネント作成について
 
@@ -119,11 +117,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
