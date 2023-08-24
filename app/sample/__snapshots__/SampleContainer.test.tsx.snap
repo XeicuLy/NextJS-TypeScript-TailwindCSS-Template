@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`feature/Sample renders correctly 1`] = `
+exports[`app/sample renders correctly 1`] = `
 <div>
-  <h1>
+  <div>
     Sample
-  </h1>
+  </div>
 </div>
 `;
