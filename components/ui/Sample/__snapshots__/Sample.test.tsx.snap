@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ui/Sample renders correctly 1`] = `
-<div>
-  <h1>
-    Sample
-  </h1>
-</div>
-`;

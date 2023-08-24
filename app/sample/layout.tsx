@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-export const Sample: FC = () => {
+export const sample: FC = () => {
   return (
     <>
-      <h1>Sample</h1>
+      <h1>sample</h1>
     </>
   );
 };
